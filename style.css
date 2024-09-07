@@ -1,0 +1,658 @@
+#wrapper-canvas canvas {
+    max-width: 100%;
+}
+
+.logo img{
+    filter: grayscale(100%) brightness(2);
+}
+
+.homo_img{
+    /* left: 75%; */
+    left:auto;
+    right:-25%;
+    opacity:0.7;
+}
+
+.logo:hover>img {
+    opacity: 0.85;
+}
+
+.socio_icon>li:hover a svg {
+    transform: scale(1.3);
+}
+
+.work{
+    transition: 1.2s;
+    font-size: 1rem;
+    /* color: transparent; */
+    /* -webkit-text-stroke: 0.6px #00e2ff; */
+    /* margin: 0.4rem 0rem; */
+}
+.work span{
+    color: #00e2ff;
+    /* -webkit-text-stroke: 0.6px #00e2ff; */
+    position: relative;
+}
+.work span::after{
+    content: "";
+    position: absolute;
+    height: 130%;
+    width: 100%;
+    left: 0;
+    background-color:#111;
+    border-left: 2px solid white;
+    animation: wordhide 3s steps(10) infinite;
+}
+@keyframes wordhide{
+    100%{
+        left: 100%;
+    }
+}
+
+
+span.to_Top {
+    background: #1788ae;
+    color: #ffff;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    opacity: 0;
+    z-index: -5;
+    left: -5px;
+    top: 6px;
+    transform: translate(0%, 15%);
+    width: max-content;
+}
+
+span.to_Top::after {
+        content: "";
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    -webkit-transform: rotate(45deg) translate(-50%, 0%);
+    transform: rotate(45deg) translate(-50%, 0%);
+    position: absolute;
+    left: 50%;
+    top: 0px;
+}
+
+.black-logo.my-4:hover .to_Top {
+        left: 110%;
+    opacity: 1;
+}
+
+.black-logo.my-4 {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+.about-section{
+    width: 90%;
+    max-width: 1200px;
+    height: 700px;
+    background: #191919;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 25%;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, -45%) scale(0);
+    transform: translate(-50%, -45%) scale(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    z-index: 1000;
+    -webkit-transition: left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, left 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, left 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.about-section.active {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    left: 50%;
+    pointer-events: all;
+}
+
+.about-section .x-icon {
+    background: #666af6;
+    background: #27292d;
+    border-radius: 50%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 15px;
+    top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.15s ease-in-out;
+    transition: -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.about-section .x-icon img {
+    vertical-align: middle;
+    width: 50%;
+}
+.about-section .about-me .about-me-text .top-skills-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1.5em;
+    position: relative;
+}
+.about-section .about-me .about-me-text .mern {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    margin-top: 1.2em;
+    color: #1788ae;
+}
+p.about-me-detail {
+    font-size: 17px;
+    margin: 10px 0;
+}
+.about-section .about-me .about-me-text ul li {
+    font-size: 15px;
+    border: 1px solid #444;
+    padding: 0.4em 0.8em;
+    border-radius: 50px;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+.about-me-text ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 0.85em;
+}
+
+.about-section .about-me .about-me-text .about-me-title {
+    color: #1788ae;
+    font-size:1.6em;
+    font-weight: 700;
+}
+.about-section .about-me .about-me-text {
+    width: 65%;
+    margin: 0 auto;
+}
+.about-section .about-me {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.about-section .about-me .about-me-text .top-skills-icons h2 {
+    margin-top: 0.5em;
+        color: #47a248;
+        font-size: 20px;
+        font-weight: 700
+}
+.about-section .about-me .about-me-text .top-skills-icons h2 {
+    margin-top: 0.5em;
+}
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -6px;
+}
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip {
+    background-color: #8cc84b;
+    color: #111111;
+    padding: 0.5em 1.25em;
+    font-weight: 600;
+    border-radius: 50px;
+    position: absolute;
+    margin-bottom: 2em;
+    top: -1.25em;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-section .about-me .about-me-text .top-skills-icons .mongodb-icon .tooltip {
+    background-color: #47a248;
+    color: #ffffff;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons h2 {
+    margin-top: 0.5em;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -6px;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip {
+    background-color: #8cc84b;
+    color: #111111;
+    padding: 0.5em 1.25em;
+    font-weight: 600;
+    border-radius: 50px;
+    position: absolute;
+    margin-bottom: 2em;
+    top: -1.25em;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-section .about-me .about-me-text .top-skills-icons .express-icon .tooltip {
+    background-color: #ffffff;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div + div {
+    margin-left: 2em;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons h2 {
+    margin-top: 0.5em;
+    color: #61dafb;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -6px;
+}
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip {
+    background-color: #8cc84b;
+    color: #111111;
+    padding: 0.5em 1.25em;
+    font-weight: 600;
+    border-radius: 50px;
+    position: absolute;
+    margin-bottom: 2em;
+    top: -1.25em;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-section .about-me .about-me-text .top-skills-icons .react-icon .tooltip {
+    background-color: #61dafb;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .illustration .coder-img {
+    width: 100%;
+}
+.about-section .illustration {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+   
+.about-section .about-me .about-me-text .top-skills-icons h2 {
+    margin-top: 0.5em;
+     color: #8cc84b;
+}
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: inherit;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -6px;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div .tooltip {
+    background-color: #8cc84b;
+    color: #111111;
+    padding: 0.5em 1.25em;
+    font-weight: 600;
+    border-radius: 50px;
+    position: absolute;
+    margin-bottom: 2em;
+    top: -1.25em;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: top 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.about-section .about-me .about-me-text .top-skills-icons .node-icon .tooltip {
+    background-color: #8cc84b;
+    margin-left: -2px;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: context-menu;
+}
+
+.about-section .about-me .about-me-text .top-skills-icons div + div {
+    margin-left: 2em;
+}
+
+
+.overlay.active {
+    opacity: 0.7;
+    pointer-events: all;
+}
+    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111;
+    opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+}
+ .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #111111;
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+/* media */
+
+@media (max-width: 1000px) {
+    .homo_img {
+        left: 50% ;
+        opacity: 0.5;
+        --tw-translate-y: -180px;
+    }
+    .about-section .illustration .coder-img {
+        width: 60%;
+        min-width: 270px;
+    }
+    .about-section {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 80vh;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        padding: 2em 0;
+    }
+    .about-me-text {
+        width: 90% !important;
+    }
+    .about-section .about-me .about-me-text .about-me-title, .about-section .about-me .about-me-text .mern {
+        text-align: center;
+    }
+    .about-section .about-me .about-me-text .about-me-detail {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .about-section .about-me .about-me-text .about-me-detail + .about-me-detail {
+        margin-top: 0.75em;
+    }
+    .about-section .about-me .about-me-text .top-skills-icons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .about-section .about-me .about-me-text .about-me-title, .about-section .about-me .about-me-text .mern {
+        text-align: center;
+    }
+    .about-section .about-me .about-me-text .about-me-detail {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px) {
+.homo_img {
+    opacity: 0.3;
+    --tw-translate-y: -80px;
+}
+}
+
+@media (max-width: 760px) {
+    .about-section .illustration {
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+    .canvas{
+        display: none;
+    }
+}
+@media (max-width: 580px) {
+.right-8 {
+    right: 1rem;
+}
+.w-7 {
+    width: 1.3rem;
+}
+}
+
+@media (max-width: 400px) {
+    .about-section .about-me .about-me-text .top-skills-icons svg {
+        width: 35px;
+        height: 35px;
+    }
+    .about-section {
+        padding: 1em 0;
+    }
+    .about-section .about-me .about-me-text .top-skills-icons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 0.7em;
+    }
+    .about-section .about-me .about-me-text .about-me-title, .about-section .about-me .about-me-text .mern {
+        text-align: center;
+    }
+
+    .about-section .about-me .about-me-text .mern {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+    .about-section .about-me .about-me-text .about-me-detail {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .about-section .about-me .about-me-text .about-me-detail {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .about-section .about-me .about-me-text .about-me-title, .about-section .about-me .about-me-text .mern {
+        text-align: center;
+    }
+}
+
+@media (max-width: 370px) {
+    .about-section .about-me {
+        zoom: 90%;
+    }
+}
+@media (max-width: 330px) {
+    .about-section .about-me {
+        zoom: 85%;
+    }
+}
